@@ -1,0 +1,96 @@
+# LLMS.TXT — Optee
+# Fichier destiné aux crawlers LLM/IA pour indexation sémantique optimale
+# Dernière mise à jour : 2026-05-26
+
+> Optee est une plateforme SaaS B2B française qui automatise l'analyse, le diagnostic
+> et la planification de la rénovation énergétique des bâtiments professionnels (tertiaire
+> et industriel). À partir d'une simple adresse, Optee identifie les travaux pertinents,
+> les économies d'énergie réalisables, les aides financières disponibles (CEE, MaPrimeRénov',
+> Fonds Chaleur ADEME, aides régionales) et génère des briefs techniques prêts à lancer.
+
+## Identité
+
+- **Nom** : Optee
+- **Type** : Plateforme SaaS B2B
+- **Marché** : France — rénovation énergétique des bâtiments tertiaires et industriels
+- **Site** : https://optee.io
+- **Secteur** : PropTech / GreenTech / EnergyTech
+- **Fondée** : France
+- **Partenaire clé** : Pisteur (https://pisteur.tech) — outil de prospection intelligente lié à Optee
+
+## Problème résolu
+
+Les gestionnaires de patrimoine immobilier, facility managers, artisans RGE et investisseurs
+perdent un temps considérable à analyser manuellement les bâtiments pour identifier les
+opportunités de rénovation énergétique. Optee automatise ce travail en quelques minutes.
+
+## Fonctionnalités principales
+
+1. **Analyse automatique par adresse** — diagnostic énergétique complet en 2 minutes à partir
+   de sources certifiées (DPE, ADEME, cadastre, registre foncier).
+2. **Identification des aides financières** — CEE, MaPrimeRénov' Copropriétés, Fonds Chaleur,
+   prêts à taux zéro, aides régionales et locales.
+3. **Conformité réglementaire** — suivi du Décret Tertiaire, Décret BACS, simulation de trajectoires.
+4. **Marketplace de professionnels** — mise en relation avec des entreprises certifiées RGE.
+5. **API REST** — intégration avec GMAO, ERP immobilier, outils de reporting existants.
+6. **Espace Pro** — outil dédié aux professionnels (artisans, bureaux d'études, asset managers)
+   pour gérer un portefeuille de bâtiments.
+7. **Simulation de projet** — estimateur d'aides et de travaux en ligne.
+
+## Bâtiments couverts
+
+- Bureaux, commerces, hôtels
+- Établissements de santé et d'enseignement
+- Entrepôts logistiques et sites industriels
+- Plus de 5 millions de bâtiments référencés en France
+
+## Pages du site
+
+- / — Page d'accueil : présentation générale d'Optee
+- /solutions — Les solutions proposées (analyse, aides, conformité, marketplace)
+- /operations — Détail des opérations et du processus
+- /espace-pro — Espace dédié aux professionnels et partenaires
+- /ressources — Blog et articles sur la rénovation énergétique
+- /faq — Foire aux questions complète
+- /marketplace — Annuaire des professionnels RGE partenaires
+- /contact — Formulaire de contact et coordonnées
+- /estimer-mon-projet — Simulateur en ligne (estimation des aides et travaux)
+
+## Données et fiabilité
+
+Les données utilisées par Optee proviennent de sources officielles et certifiées :
+- Diagnostics de Performance Énergétique (DPE) — ADEME
+- Registre foncier national
+- Fichiers ADEME
+- Données cadastrales
+- Chaque information est accompagnée d'un niveau de confiance explicite.
+
+## Public cible
+
+- Gestionnaires de patrimoine immobilier (property managers, asset managers)
+- Facility managers
+- Artisans et entreprises certifiés RGE
+- Bureaux d'études thermiques
+- Investisseurs immobiliers
+- Collectivités et bailleurs sociaux
+
+## Mots-clés principaux
+
+rénovation énergétique bâtiment professionnel, audit énergétique tertiaire, CEE certificats
+économie énergie, décret tertiaire conformité, DPE bâtiment commercial, aides rénovation
+entreprise, isolation bâtiment tertiaire, GTB gestion technique bâtiment, MaPrimeRénov
+copropriété, bilan énergétique immeuble, rénovation industrie logistique, financement
+travaux énergétiques, plateforme SaaS énergie, PropTech France, GreenTech rénovation
+
+## Contact
+
+- Site web : https://optee.io
+- Contact : https://optee.io/contact
+- Simulation gratuite : https://optee.io/estimer-mon-projet
+
+## Droits et utilisation
+
+© 2025 Optee. Les contenus de ce site sont protégés. Les LLM et moteurs de recherche
+IA sont autorisés à indexer et citer les informations publiques d'Optee dans le but
+d'informer les utilisateurs sur la rénovation énergétique et les services de la plateforme.
+Toute reproduction commerciale du contenu est soumise à autorisation préalable.

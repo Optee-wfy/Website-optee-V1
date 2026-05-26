@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, useLocation, Navigate, Outlet } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { MessageCircle, Phone, Mail, X } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -14,6 +14,28 @@ import Contact from './pages/Contact';
 import FAQ from './pages/FAQ';
 import Marketplace from './pages/Marketplace';
 import Simulation from './pages/Simulation';
+import AdminDashboard from './pages/AdminDashboard';
+import AdminLogin from './pages/AdminLogin';
+
+// Protected Route Component
+const AdminRoute = ({ children }: { children: JSX.Element }) => {
+  const isAdmin = localStorage.getItem('isAdmin') === 'true';
+  return isAdmin ? children : <Navigate to="/admin" />;
+};
+
+// Layout public : Header + contenu (Outlet) + Footer
+function PublicLayout() {
+  return (
+    <>
+      <Header />
+      <main>
+        <Outlet />
+      </main>
+      <Footer />
+      <WhatsAppWidget />
+    </>
+  );
+}
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -103,9 +125,17 @@ function App() {
   return (
     <BrowserRouter>
       <ScrollToTop />
-      <Header />
-      <main>
-        <Routes>
+      <Routes>
+        <Route path="/admin" element={<AdminLogin />} />
+        <Route
+          path="/admin/dashboard"
+          element={
+            <AdminRoute>
+              <AdminDashboard />
+            </AdminRoute>
+          }
+        />
+        <Route element={<PublicLayout />}>
           <Route path="/" element={<Home />} />
           <Route path="/solutions" element={<Solutions />} />
           <Route path="/operations" element={<Operations />} />
@@ -116,10 +146,8 @@ function App() {
           <Route path="/faq" element={<FAQ />} />
           <Route path="/marketplace" element={<Marketplace />} />
           <Route path="/estimer-mon-projet" element={<Simulation />} />
-        </Routes>
-      </main>
-      <Footer />
-      <WhatsAppWidget />
+        </Route>
+      </Routes>
     </BrowserRouter>
   );
 }

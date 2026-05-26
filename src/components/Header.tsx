@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, ArrowRight } from 'lucide-react';
 import Logo from './Logo';
+import { trackButtonClick } from '../lib/analytics';
 
 const navLinks = [
   { to: '/', label: 'Accueil' },
@@ -55,6 +56,7 @@ export default function Header() {
             href="https://pisteur.tech/"
             target="_blank"
             rel="noopener noreferrer"
+            onClick={() => trackButtonClick('Pisteur - Barre annonce')}
             className="group flex items-center gap-1 font-black uppercase tracking-widest text-white hover:text-green-400 transition-colors"
           >
             Découvrir
@@ -90,11 +92,15 @@ export default function Header() {
         </nav>
 
         <div className="hidden lg:flex items-center justify-end flex-shrink-0 w-36">
-          <Link to="/contact" className={`inline-flex items-center justify-center px-5 py-2 text-sm font-semibold rounded-full transition-all duration-200 hover:-translate-y-0.5 ${
-            isDarkLinkColor
-              ? 'bg-green-500 text-white shadow-lg shadow-green-500/25 hover:bg-green-600'
-              : 'bg-white/10 backdrop-blur-sm border border-white/20 text-white hover:bg-white/20'
-          }`}>
+          <Link
+            to="/contact"
+            onClick={() => trackButtonClick('Essayer Optee')}
+            className={`inline-flex items-center justify-center px-5 py-2 text-sm font-semibold rounded-full transition-all duration-200 hover:-translate-y-0.5 ${
+              isDarkLinkColor
+                ? 'bg-green-500 text-white shadow-lg shadow-green-500/25 hover:bg-green-600'
+                : 'bg-white/10 backdrop-blur-sm border border-white/20 text-white hover:bg-white/20'
+            }`}
+          >
             Essayer Optee
           </Link>
         </div>

@@ -4,6 +4,7 @@ import { Mail, Phone, MapPin, ArrowRight, CheckCircle2, MessageCircle } from 'lu
 
 import { useLocation } from 'react-router-dom';
 import { getEmailJsConfig } from '../lib/emailjs';
+import { supabase } from '../lib/supabase';
 import SEO from '../components/SEO';
 import FAQSection from '../components/FAQSection';
 
@@ -56,13 +57,31 @@ export default function Contact() {
       return;
     }
 
+    const form = formRef.current;
+
     Promise.all([
       // 1. Envoi au client (accusé de réception)
-      emailjs.sendForm(emailJsConfig.serviceId, emailJsConfig.templateClient, formRef.current, { publicKey: emailJsConfig.publicKey }),
+      emailjs.sendForm(emailJsConfig.serviceId, emailJsConfig.templateClient, form, { publicKey: emailJsConfig.publicKey }),
       // 2. Envoi à l'équipe Optee (notification)
-      emailjs.sendForm(emailJsConfig.serviceId, emailJsConfig.templateNotif, formRef.current, { publicKey: emailJsConfig.publicKey })
+      emailjs.sendForm(emailJsConfig.serviceId, emailJsConfig.templateNotif, form, { publicKey: emailJsConfig.publicKey })
     ]).then(
-      () => {
+      async () => {
+        // 3. Sauvegarde dans Supabase (silencieux en cas d'erreur)
+        try {
+          const getValue = (name: string) =>
+            (form.querySelector(`[name="${name}"]`) as HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement | null)?.value ?? '';
+
+          await supabase.from('contact_submissions').insert({
+            firstname: getValue('user_firstname'),
+            lastname: getValue('user_lastname'),
+            company: getValue('user_company'),
+            email: getValue('user_email'),
+            subject: getValue('contact_reason'),
+            message: getValue('message'),
+          });
+        } catch (_e) {
+          // silent — emailjs already succeeded
+        }
         setSubmitted(true);
         setIsSubmitting(false);
       },

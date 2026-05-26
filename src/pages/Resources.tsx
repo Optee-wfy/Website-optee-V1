@@ -422,7 +422,7 @@ export default function Resources() {
       <section className="bg-gray-50 min-h-[600px]">
         {/* Tag filter bar */}
         {allTags.length > 0 && (
-          <div className="sticky top-[72px] z-30 bg-white/90 backdrop-blur-sm border-b border-navy-100 shadow-sm">
+          <div className="sticky top-[88px] lg:top-[96px] z-40 bg-white/95 backdrop-blur-md border-b border-navy-100 shadow-sm">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
               <div className="flex items-center gap-3 overflow-x-auto [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden">
                 <span className="flex-shrink-0 text-navy-400 text-xs font-semibold uppercase tracking-wider flex items-center gap-1">

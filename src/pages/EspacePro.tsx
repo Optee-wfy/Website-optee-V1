@@ -44,9 +44,10 @@ const included = [
 export default function EspacePro() {
   return (
     <>
-      <SEO 
-        title="Espace Professionnel | Gestion de Parc Immobilier" 
-        description="Pilotez la transition énergétique de votre patrimoine immobilier avec nos outils pros : tableaux de bord, planification de travaux et suivi réglementaire." 
+      <SEO
+        canonical="/espace-pro"
+        title="Espace Professionnel | Gestion de Parc Immobilier"
+        description="Pilotez la transition énergétique de votre patrimoine avec Optee : tableaux de bord, planification travaux, conformité Décret BACS et Décret Tertiaire."
         faqs={proFaqs}
       />
       <section className="relative pt-32 pb-16 bg-navy-950">

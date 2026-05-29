@@ -10,6 +10,7 @@ const navLinks = [
   { to: '/operations', label: 'Opérations' },
   { to: '/espace-pro', label: 'Espace Pro' },
   { to: '/ressources', label: 'Ressources' },
+  { to: '/a-propos', label: 'À propos' },
   { to: '/contact', label: 'Contact' },
 ];
 
@@ -31,7 +32,7 @@ export default function Header() {
   }, [location]);
 
   // Pages dont le hero est sur fond navy-950 sombre — logo et texte restent blancs jusqu'au scroll
-  const DARK_HERO_PAGES = ['/', '/solutions', '/operations', '/espace-pro', '/contact', '/faq', '/marketplace'];
+  const DARK_HERO_PAGES = ['/', '/solutions', '/operations', '/espace-pro', '/contact', '/faq', '/marketplace', '/a-propos'];
   const isOnDarkHero =
     DARK_HERO_PAGES.includes(location.pathname) ||
     location.pathname.startsWith('/ressources');   // liste blog + articles (/ressources/:slug)

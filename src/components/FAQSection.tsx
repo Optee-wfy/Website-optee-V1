@@ -24,9 +24,15 @@ export default function FAQSection({
           <h2 className="text-3xl font-bold text-navy-900 mb-4">{title}</h2>
           <p className="text-navy-600">{description}</p>
         </div>
-        <div className="bg-white rounded-2xl border border-navy-100 px-6 sm:px-8">
+        <div className="bg-white rounded-2xl border border-navy-100 px-6 sm:px-8" itemScope itemType="https://schema.org/FAQPage">
           {faqs.map((faq) => (
-            <FAQItem key={faq.question} question={faq.question} answer={faq.answer} />
+            <div key={faq.question} itemScope itemProp="mainEntity" itemType="https://schema.org/Question">
+              <meta itemProp="name" content={faq.question} />
+              <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
+                <meta itemProp="text" content={faq.answer} />
+              </div>
+              <FAQItem question={faq.question} answer={faq.answer} />
+            </div>
           ))}
         </div>
         {showContact && (

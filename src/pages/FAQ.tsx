@@ -17,9 +17,10 @@ const faqs = [
 export default function FAQ() {
   return (
     <>
-      <SEO 
-        title="Foire Aux Questions" 
-        description="Trouvez les réponses à toutes vos questions sur Optee, l'analyse énergétique automatique et le financement de vos travaux de rénovation." 
+      <SEO
+        canonical="/faq"
+        title="FAQ Rénovation Énergétique | CEE, DPE, Décret Tertiaire"
+        description="Trouvez les réponses à toutes vos questions sur Optee, l'analyse énergétique automatique, les aides CEE et le financement de vos travaux de rénovation."
         faqs={faqs}
       />
       <section className="relative pt-32 pb-16 bg-navy-950">

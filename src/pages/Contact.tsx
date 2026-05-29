@@ -95,9 +95,10 @@ export default function Contact() {
 
   return (
     <>
-      <SEO 
-        title="Contactez nos Experts" 
-        description="Besoin d'un accompagnement pour votre rénovation énergétique ? Contactez l'équipe Optee pour une démo ou des informations." 
+      <SEO
+        canonical="/contact"
+        title="Contactez nos Experts"
+        description="Contactez l'équipe Optee à Paris. Réponse sous 24h, démonstration personnalisée de 30 min, analyse gratuite d'un bâtiment. Téléphone, email et WhatsApp."
         faqs={contactFaqs}
       />
       <section className="relative pt-32 pb-16 bg-navy-950">
@@ -180,16 +181,16 @@ export default function Contact() {
               )}
             </div>
 
-            <div className="space-y-6">
-              <div className="bg-gray-50 rounded-2xl p-8 border border-navy-100">
-                <h3 className="text-lg font-semibold text-navy-900 mb-6">Nous contacter directement</h3>
-                <div className="space-y-5">
+            <div className="space-y-5">
+              <div className="bg-gray-50 rounded-2xl p-7 border border-navy-100">
+                <h3 className="text-lg font-semibold text-navy-900 mb-5">Nous contacter directement</h3>
+                <div className="space-y-4">
                   <div className="flex items-center gap-4">
                     <div className="w-10 h-10 bg-green-50 rounded-full flex items-center justify-center flex-shrink-0">
                       <Phone className="w-5 h-5 text-green-600" />
                     </div>
                     <div>
-                      <p className="text-sm text-navy-500">Telephone</p>
+                      <p className="text-sm text-navy-500">Téléphone</p>
                       <a href="tel:+33620432059" className="text-navy-900 font-medium hover:text-green-600 transition-colors">+33 6 20 43 20 59</a>
                     </div>
                   </div>
@@ -223,16 +224,94 @@ export default function Contact() {
                 </div>
               </div>
 
-              <div className="bg-gray-50 rounded-2xl p-8 border border-navy-100">
-                <h3 className="text-lg font-semibold text-navy-900 mb-6">Ce que vous obtiendrez</h3>
-                <ul className="space-y-4">
-                  {['Demonstration personnalisee de 30 min', 'Analyse gratuite d\'un batiment', 'Estimation des economies potentielles', 'Presentation des aides disponibles', 'Reponses a toutes vos questions'].map((item) => (
+              {/* Google Business */}
+              <a
+                href="https://share.google/Ny1DRi8DwNTJ3IFSg"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex items-center gap-4 bg-white border border-navy-100 hover:border-green-300 hover:shadow-lg hover:shadow-green-500/5 rounded-2xl p-5 transition-all duration-300"
+              >
+                <div className="w-11 h-11 rounded-xl bg-white shadow border border-navy-100 flex items-center justify-center flex-shrink-0">
+                  <svg viewBox="0 0 48 48" className="w-6 h-6">
+                    <path fill="#4285F4" d="M43.6 20.5H42V20H24v8h11.3C33.7 32.8 29.3 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.8 1.1 7.9 3l5.7-5.7C34.1 6.5 29.3 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20 20-8.9 20-20c0-1.2-.1-2.4-.4-3.5z"/>
+                    <path fill="#34A853" d="M6.3 14.7l6.6 4.8C14.5 16 19 12 24 12c3.1 0 5.8 1.1 7.9 3l5.7-5.7C34.1 6.5 29.3 4 24 4c-7.7 0-14.4 4.4-17.7 10.7z"/>
+                    <path fill="#FBBC05" d="M24 44c5.2 0 9.9-1.9 13.4-5l-6.2-5.2C29.4 35.6 26.8 36 24 36c-5.3 0-9.7-3.2-11.3-7.8l-6.6 5.1C9.6 39.6 16.3 44 24 44z"/>
+                    <path fill="#EA4335" d="M43.6 20.5H42V20H24v8h11.3c-.8 2.2-2.3 4.1-4.2 5.5l6.2 5.2C40.8 35.6 44 30.2 44 24c0-1.2-.1-2.4-.4-3.5z"/>
+                  </svg>
+                </div>
+                <div className="flex-1 min-w-0">
+                  <p className="text-xs font-black text-navy-400 uppercase tracking-widest">Google Business</p>
+                  <p className="text-sm font-bold text-navy-900 mt-0.5">Voir notre fiche & avis clients</p>
+                  <div className="flex items-center gap-0.5 mt-1">
+                    {[...Array(5)].map((_, i) => (
+                      <svg key={i} className="w-3.5 h-3.5 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                    ))}
+                  </div>
+                </div>
+                <ArrowRight className="w-4 h-4 text-navy-300 group-hover:text-green-500 group-hover:translate-x-1 transition-all flex-shrink-0" />
+              </a>
+
+              {/* Ce que vous obtiendrez */}
+              <div className="bg-gray-50 rounded-2xl p-7 border border-navy-100">
+                <h3 className="text-lg font-semibold text-navy-900 mb-5">Ce que vous obtiendrez</h3>
+                <ul className="space-y-3">
+                  {['Démonstration personnalisée de 30 min', "Analyse gratuite d'un bâtiment", 'Estimation des économies potentielles', 'Présentation des aides disponibles', 'Réponses à toutes vos questions'].map((item) => (
                     <li key={item} className="flex items-start gap-3">
                       <CheckCircle2 className="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" />
                       <span className="text-navy-700 text-sm">{item}</span>
                     </li>
                   ))}
                 </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Map section */}
+      <section className="bg-navy-950 py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-8">
+            <div>
+              <p className="text-xs font-black text-green-400 uppercase tracking-widest mb-2">Localisation</p>
+              <h2 className="text-2xl sm:text-3xl font-bold text-white">Nous trouver</h2>
+              <p className="text-navy-300 mt-2 text-sm">Notre équipe est basée à Paris et intervient sur tout le territoire français.</p>
+            </div>
+            <a
+              href="https://share.google/Ny1DRi8DwNTJ3IFSg"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2.5 px-5 py-3 bg-white/10 hover:bg-white/20 border border-white/10 hover:border-white/20 rounded-xl text-white text-sm font-bold transition-all flex-shrink-0"
+            >
+              <svg viewBox="0 0 48 48" className="w-5 h-5 flex-shrink-0">
+                <path fill="#4285F4" d="M43.6 20.5H42V20H24v8h11.3C33.7 32.8 29.3 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.8 1.1 7.9 3l5.7-5.7C34.1 6.5 29.3 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20 20-8.9 20-20c0-1.2-.1-2.4-.4-3.5z"/>
+                <path fill="#34A853" d="M6.3 14.7l6.6 4.8C14.5 16 19 12 24 12c3.1 0 5.8 1.1 7.9 3l5.7-5.7C34.1 6.5 29.3 4 24 4c-7.7 0-14.4 4.4-17.7 10.7z"/>
+                <path fill="#FBBC05" d="M24 44c5.2 0 9.9-1.9 13.4-5l-6.2-5.2C29.4 35.6 26.8 36 24 36c-5.3 0-9.7-3.2-11.3-7.8l-6.6 5.1C9.6 39.6 16.3 44 24 44z"/>
+                <path fill="#EA4335" d="M43.6 20.5H42V20H24v8h11.3c-.8 2.2-2.3 4.1-4.2 5.5l6.2 5.2C40.8 35.6 44 30.2 44 24c0-1.2-.1-2.4-.4-3.5z"/>
+              </svg>
+              Ouvrir dans Google Maps
+              <ArrowRight className="w-4 h-4" />
+            </a>
+          </div>
+
+          <div className="relative rounded-2xl overflow-hidden border border-white/10 shadow-2xl" style={{ height: '380px' }}>
+            <iframe
+              title="Localisation Optee — Paris, France"
+              src="https://maps.google.com/maps?q=Paris,+France&hl=fr&z=13&output=embed"
+              width="100%"
+              height="100%"
+              style={{ border: 0, display: 'block' }}
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              allowFullScreen
+            />
+            <div className="absolute bottom-4 left-4 bg-navy-950/90 backdrop-blur-sm border border-white/10 rounded-xl px-4 py-3 flex items-center gap-3">
+              <div className="w-8 h-8 bg-green-500 rounded-lg flex items-center justify-center flex-shrink-0">
+                <MapPin className="w-4 h-4 text-white" />
+              </div>
+              <div>
+                <p className="text-white font-bold text-sm leading-tight">Optee</p>
+                <p className="text-navy-300 text-xs">Paris, France</p>
               </div>
             </div>
           </div>

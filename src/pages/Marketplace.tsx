@@ -36,9 +36,10 @@ const guarantees = [
 export default function Marketplace() {
   return (
     <>
-      <SEO 
-        title="Marketplace Entreprises RGE | Optee" 
-        description="Trouvez des entreprises certifiées RGE pour vos travaux de rénovation énergétique. Devis rapides, qualité garantie et entreprises vérifiées." 
+      <SEO
+        canonical="/marketplace"
+        title="Marketplace Entreprises RGE Certifiées"
+        description="Trouvez des entreprises certifiées RGE pour vos travaux de rénovation énergétique. Devis rapides, qualité garantie et entreprises vérifiées."
         faqs={marketplaceFaqs}
       />
       <section className="relative pt-32 pb-16 bg-navy-950">

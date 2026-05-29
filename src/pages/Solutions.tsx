@@ -40,9 +40,10 @@ const audiences = [
 export default function Solutions() {
   return (
     <>
-      <SEO 
-        title="Nos Solutions | Diagnostic et Planification Rénovation" 
-        description="Découvrez les fonctionnalités d'Optee : analyse automatique, simulation DPE, calcul d'aides financières et marketplace de travaux." 
+      <SEO
+        canonical="/solutions"
+        title="Nos Solutions | Diagnostic et Planification Énergie"
+        description="Découvrez les fonctionnalités d'Optee : analyse automatique, simulation DPE, calcul d'aides CEE et MaPrimeRénov', marketplace de travaux RGE."
         faqs={solutionsFaqs}
       />
       <section className="relative pt-32 pb-16 bg-navy-950">

@@ -354,9 +354,10 @@ export default function Resources() {
 
   return (
     <>
-      <SEO 
-        title="Blog & Ressources" 
-        description="Guides, études de cas et analyses pour maîtriser la rénovation énergétique des bâtiments professionnels. Décret Tertiaire, CEE, DPE, financement." 
+      <SEO
+        canonical="/ressources"
+        title="Blog Rénovation Énergétique | Guides, CEE, Décret Tertiaire"
+        description="Guides, études de cas et analyses pour maîtriser la rénovation énergétique des bâtiments professionnels. Décret Tertiaire, CEE, DPE, financement."
         faqs={resourcesFaqs}
       />
       {/* ── Hero ── */}

@@ -4,7 +4,7 @@ import {
   ArrowRight, Building2, BarChart3, FileText, Users,
   TrendingUp, Shield, ChevronRight, Star, Play,
   Send, Mail, MessageSquare, Search, Lightbulb,
-  Home as HomeIcon,
+  Home as HomeIcon, MapPin,
   Flame, Cpu, Wind, Layers, Sun, Droplets, ShieldCheck, Plus,
   Info, ChevronDown, Grid2X2, Handshake, Gauge, X
 } from 'lucide-react';
@@ -154,9 +154,10 @@ export default function Home() {
 
   return (
     <>
-      <SEO 
-        title="Optee | Performance énergétique réinventée" 
-        description="Identifiez tous les travaux possibles sur vos bâtiments en 30 secondes. Sans audit, sans engagement. Maximisez votre ROI énergétique." 
+      <SEO
+        canonical="/"
+        title="Performance énergétique réinventée"
+        description="Optee analyse vos bâtiments professionnels en 30 secondes : travaux prioritaires, aides CEE et MaPrimeRénov', conformité Décret Tertiaire. Diagnostic gratuit."
         faqs={homeFaqs}
       />
       <section className="relative min-h-screen flex items-center overflow-hidden bg-navy-950">
@@ -1089,6 +1090,82 @@ export default function Home() {
                 Planifier une démo gratuite
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Google Maps + Business */}
+      <section className="py-14 bg-navy-950">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-8 items-stretch">
+            {/* Map */}
+            <div className="relative rounded-2xl overflow-hidden border border-white/10 shadow-2xl" style={{ minHeight: '300px' }}>
+              <iframe
+                title="Nous trouver — Optee Paris"
+                src="https://maps.google.com/maps?q=Paris,+France&hl=fr&z=13&output=embed"
+                width="100%"
+                height="100%"
+                style={{ border: 0, display: 'block', position: 'absolute', inset: 0 }}
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                allowFullScreen
+              />
+              <div className="absolute bottom-4 left-4 bg-navy-950/90 backdrop-blur-sm border border-white/10 rounded-xl px-4 py-3 flex items-center gap-3">
+                <div className="w-8 h-8 bg-green-500 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <MapPin className="w-4 h-4 text-white" />
+                </div>
+                <div>
+                  <p className="text-white font-bold text-sm">Optee</p>
+                  <p className="text-navy-300 text-xs">Paris, France</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Info + Google Business */}
+            <div className="flex flex-col justify-center gap-6">
+              <div>
+                <p className="text-xs font-black text-green-400 uppercase tracking-widest mb-2">Où nous trouver</p>
+                <h2 className="text-2xl sm:text-3xl font-bold text-white mb-3">Basés à Paris,<br />présents partout en France</h2>
+                <p className="text-navy-300 text-base leading-relaxed">Notre équipe intervient sur l'ensemble du territoire français pour accompagner vos projets de rénovation énergétique.</p>
+              </div>
+
+              <a
+                href="https://share.google/Ny1DRi8DwNTJ3IFSg"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex items-center gap-4 bg-white/5 hover:bg-white/10 border border-white/10 hover:border-green-500/30 rounded-2xl p-5 transition-all duration-300"
+              >
+                <div className="w-11 h-11 rounded-xl bg-white flex items-center justify-center flex-shrink-0 shadow">
+                  <svg viewBox="0 0 48 48" className="w-6 h-6">
+                    <path fill="#4285F4" d="M43.6 20.5H42V20H24v8h11.3C33.7 32.8 29.3 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.8 1.1 7.9 3l5.7-5.7C34.1 6.5 29.3 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20 20-8.9 20-20c0-1.2-.1-2.4-.4-3.5z"/>
+                    <path fill="#34A853" d="M6.3 14.7l6.6 4.8C14.5 16 19 12 24 12c3.1 0 5.8 1.1 7.9 3l5.7-5.7C34.1 6.5 29.3 4 24 4c-7.7 0-14.4 4.4-17.7 10.7z"/>
+                    <path fill="#FBBC05" d="M24 44c5.2 0 9.9-1.9 13.4-5l-6.2-5.2C29.4 35.6 26.8 36 24 36c-5.3 0-9.7-3.2-11.3-7.8l-6.6 5.1C9.6 39.6 16.3 44 24 44z"/>
+                    <path fill="#EA4335" d="M43.6 20.5H42V20H24v8h11.3c-.8 2.2-2.3 4.1-4.2 5.5l6.2 5.2C40.8 35.6 44 30.2 44 24c0-1.2-.1-2.4-.4-3.5z"/>
+                  </svg>
+                </div>
+                <div className="flex-1">
+                  <p className="text-xs font-black text-navy-400 uppercase tracking-widest">Google Business</p>
+                  <p className="text-white font-bold text-sm mt-0.5">Voir notre fiche & avis clients</p>
+                  <div className="flex items-center gap-0.5 mt-1">
+                    {[...Array(5)].map((_, i) => (
+                      <svg key={i} className="w-3.5 h-3.5 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                    ))}
+                  </div>
+                </div>
+                <ArrowRight className="w-4 h-4 text-navy-400 group-hover:text-green-400 group-hover:translate-x-1 transition-all flex-shrink-0" />
+              </a>
+
+              <a
+                href="https://maps.google.com/maps?q=Paris,+France"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-navy-300 hover:text-white text-sm font-medium transition-colors"
+              >
+                <MapPin className="w-4 h-4" />
+                Ouvrir dans Google Maps
+                <ArrowRight className="w-3.5 h-3.5" />
+              </a>
             </div>
           </div>
         </div>

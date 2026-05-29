@@ -14,6 +14,7 @@ import Contact from './pages/Contact';
 import FAQ from './pages/FAQ';
 import Marketplace from './pages/Marketplace';
 import Simulation from './pages/Simulation';
+import About from './pages/About';
 import AdminDashboard from './pages/AdminDashboard';
 import AdminLogin from './pages/AdminLogin';
 
@@ -146,6 +147,7 @@ function App() {
           <Route path="/faq" element={<FAQ />} />
           <Route path="/marketplace" element={<Marketplace />} />
           <Route path="/estimer-mon-projet" element={<Simulation />} />
+          <Route path="/a-propos" element={<About />} />
         </Route>
       </Routes>
     </BrowserRouter>

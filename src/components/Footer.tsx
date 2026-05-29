@@ -13,7 +13,7 @@ const footerLinks = {
     { to: '/ressources', label: 'Blog' },
     { to: '/faq', label: 'FAQ' },
     { to: '/ressources', label: 'Guides' },
-    { to: '/ressources', label: 'Études de cas' },
+    { to: '/estimer-mon-projet', label: 'Études de cas' },
   ],
   Entreprise: [
     { to: '/contact', label: 'Contact' },
@@ -43,7 +43,7 @@ export default function Footer() {
               <a href="#" className="w-9 h-9 bg-navy-800 rounded-lg flex items-center justify-center hover:bg-green-500 transition-colors">
                 <Twitter className="w-4 h-4" />
               </a>
-              <a href="#" className="w-9 h-9 bg-navy-800 rounded-lg flex items-center justify-center hover:bg-green-500 transition-colors">
+              <a href="mailto:maxime@optee.io" className="w-9 h-9 bg-navy-800 rounded-lg flex items-center justify-center hover:bg-green-500 transition-colors">
                 <Mail className="w-4 h-4" />
               </a>
             </div>
@@ -80,6 +80,12 @@ export default function Footer() {
 
         <div className="mt-16 pt-8 border-t border-navy-800 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-navy-400 text-sm">&copy; 2026 Optee. Tous droits réservés.</p>
+          <p className="text-navy-400 text-sm order-last sm:order-none">
+            Site réalisé par{' '}
+            <a href="https://webfityou.com/" target="_blank" rel="noopener noreferrer" className="font-bold underline text-navy-300 hover:text-white transition-colors">
+              WebFitYou
+            </a>
+          </p>
           <div className="flex gap-6">
             <Link to="/" className="text-navy-400 text-sm hover:text-white transition-colors">Mentions légales</Link>
             <Link to="/" className="text-navy-400 text-sm hover:text-white transition-colors">CGU</Link>

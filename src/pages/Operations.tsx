@@ -42,9 +42,10 @@ export default function Operations() {
 
   return (
     <>
-      <SEO 
-        title="Opérations de Rénovation | Travaux et Solutions" 
-        description="Explorez tous les types de travaux de rénovation énergétique analysés par Optee : chauffage, isolation, solaire, ventilation et bien plus." 
+      <SEO
+        canonical="/operations"
+        title="Opérations de Rénovation | Travaux et Solutions"
+        description="Explorez tous les types de travaux de rénovation énergétique analysés par Optee : chauffage, isolation, solaire, ventilation et bien plus."
         faqs={operationsFaqs}
       />
       <section className="relative pt-32 pb-16 bg-navy-950">
